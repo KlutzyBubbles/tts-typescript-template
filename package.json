@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.11.13",
+    "@typescript-to-lua/language-extensions": "^1.19.0",
+    "lua-types": "^2.13.1",
+    "tts-types": "^0.0.3",
+    "typescript": "^5.0.4",
+    "typescript-to-lua": "^1.23.0"
+  },
+  "name": "tts-typescript-template",
+  "description": "Template to create tabletop simulator scripts using Typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "npm run clean && npm run build && npm run copy:lua && npm run copy:xml",
+    "build": "tstl",
+    "clean": "rimraf build/* --glob",
+    "copy:lua": "copyfiles -f \"build/src/*.lua\" \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/\"",
+    "copy:xml": "copyfiles -f  \"src/*.xml\" \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/\""
+  },
+  "author": "KlutzyBubbles",
+  "license": "MIT",
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5"
+  }
+}

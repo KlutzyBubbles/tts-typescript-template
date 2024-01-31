@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+
+    "declaration": false,
+    "declarationMap": false,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "strict": true,
+    "types": ["lua-types/5.2", "tts-types", "@typescript-to-lua/language-extensions"],
+  },
+  "tstl": {
+    "luaTarget": "5.2",
+    "luaLibImport": "require-minimal",
+    "noImplicitSelf": true,
+    "tstlVerbose": true
+  },
+  "include": ["src/*.ts"]
+}
