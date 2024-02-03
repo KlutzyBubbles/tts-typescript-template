@@ -20,9 +20,9 @@
   },
   "tstl": {
     "luaTarget": "5.2",
-    "luaLibImport": "require-minimal",
+    // "luaLibImport": "require-minimal",
     "noImplicitSelf": true,
     "tstlVerbose": true
   },
-  "include": ["src/*.ts"]
+  // "include": ["src/*.ts"]
 }

@@ -11,9 +11,11 @@
   "description": "Template to create tabletop simulator scripts using Typescript",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "npm run clean && npm run build && npm run copy:lua && npm run copy:xml",
+    "deploy": "npm run clean:build && npm run build && npm run copy:src && npm run clean:output && npm run copy:lua && npm run copy:xml",
     "build": "tstl",
-    "clean": "rimraf build/* --glob",
+    "clean:build": "rimraf build/* --glob",
+    "clean:output": "rimraf \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/src/*.lua\" --glob && rimraf \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/src/*.xml\" --glob",
+    "copy:src": "copyfiles --up 1 \"build/**/*\" \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/\"",
     "copy:lua": "copyfiles -f \"build/src/*.lua\" \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/\"",
     "copy:xml": "copyfiles -f  \"src/*.xml\" \"%LOCALAPPDATA%/Temp/TabletopSimulator/Tabletop Simulator Lua/\""
   },
