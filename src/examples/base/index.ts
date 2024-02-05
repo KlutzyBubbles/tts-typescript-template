@@ -51,6 +51,7 @@ export function runExamples(): void {
 * Promises KIND OF work, but im getting weird behaviour where
 * when resolving a promise, the promise also errors with
 * "bad argument #1 to 'type' (value expected)"
+* might be better to stick to callbacks
 async function promiseExample(result: boolean): Promise<void> {
     print('Runing promise test')
     return new Promise((resolve, reject) => {
@@ -72,7 +73,7 @@ function runHotkeys(): void {
     print(`showing hotkeys ${showHotkeyConfig()}`)
 }
 
-function exampleHotkeyFunc(color: ColorLiteral, hoveredObject: ObjectType | undefined, pointer: Vector, isKeyUp: boolean): void {
+function exampleHotkeyFunc(color: ColorLiteral, hoveredObject: GObject | undefined, pointer: Vector, isKeyUp: boolean): void {
     print(`exampleHotkeyFunc(${color}, ${pointer}, ${isKeyUp})`)
     if (hoveredObject === undefined) {
         print('Hovered object undefined')
@@ -291,10 +292,10 @@ function runSpawnObjectJSON(): void {
     }, 1)
 }
 
-function spawnedObject(object: ObjectType): void {
+function spawnedObject(object: GObject): void {
     print(`Spawned ${object.name}, ${object.locked}`)
 }
 
-(_G as any).spawnedObjectGlobal = (object: ObjectType, params: any): void => {
+(_G as any).spawnedObjectGlobal = (object: GObject, params: any): void => {
     print(`Global call Spawned ${object.name}, ${object.locked}, ${params.test}`)
 }
