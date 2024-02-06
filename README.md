@@ -24,6 +24,7 @@ Assuming you have those two setup, follow these steps
 
 ## Weird TTS Things
 
+# Global functions
 Because of the way `typescript-to-lua` builds the lua files, functions are local by default.
 
 This means global event functions like the ones found [here](https://api.tabletopsimulator.com/events/) (onLoad etc) will be outputted as local and wont be called by TTS.
@@ -39,4 +40,8 @@ function onLoad() {
     print('This will never execute')
 }
 ```
- 
+
+# TSTL Config
+Because tabletop simulator likes to clear root folder files, you either need to bundle your output, or use the `"luaLibImport": "inline"` in the `tsconfig.json`.
+
+Without this a lib file will be created in the root folder which will work for 1 run in tabletop simulator but reloading the game will throw errors.
