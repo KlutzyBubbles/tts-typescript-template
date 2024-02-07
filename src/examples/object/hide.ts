@@ -2,9 +2,7 @@ import { Objects } from "../../utils/constants"
 
 export function runHideChecks(): void {
     let object = getObjectFromGUID(Objects.square)
-    let assetbundle = getObjectFromGUID(Objects.assetbundle)
-    if (object !== undefined
-        && assetbundle !== undefined) {
+    if (object !== undefined) {
         print('Hide functions')
         print(object.setHiddenFrom(['Blue']))
         print(object.setHiddenFrom([]))
