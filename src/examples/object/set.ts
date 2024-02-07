@@ -2,17 +2,11 @@ import { Objects, Zones } from "../../utils/constants"
 
 export function runSetChecks(): void {
     let object = getObjectFromGUID(Objects.square)
-    let assetbundle = getObjectFromGUID(Objects.assetbundle)
-    let bag = getObjectFromGUID(Objects.bag)
-    let deck = getObjectFromGUID(Objects.deck)
     let dice = getObjectFromGUID(Objects.dice)
     let cBoard = getObjectFromGUID(Objects.customBoard)
     let counter = getObjectFromGUID(Objects.counter)
     let book = getObjectFromGUID(Objects.pdf)
     if (object !== undefined
-        && assetbundle !== undefined
-        && bag !== undefined
-        && deck !== undefined
         && book !== undefined
         && dice !== undefined
         && cBoard !== undefined
