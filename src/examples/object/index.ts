@@ -2,6 +2,7 @@ import { runActionChecks } from "./action"
 import { runBehaviourChecks } from "./behaviour"
 import { runComponentChecks } from "./component"
 import { runGetChecks } from "./get"
+import { runGlobalChecks } from "./global"
 import { runHideChecks } from "./hide"
 import { runSetChecks } from "./set"
 import { runTagChecks } from "./tags"
@@ -18,5 +19,6 @@ export function runExamples(): void {
     // runSetChecks()
     // runActionChecks()
     // runComponentChecks()
-    runHideChecks()
+    // runHideChecks()
+    runGlobalChecks()
 }

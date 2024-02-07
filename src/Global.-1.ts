@@ -20,3 +20,8 @@ let c = new MyClass();
     c.increment(1)
     print(`Class blind Increment: ${c.value}`)
 }
+
+(_G as any).globalFunc = (value: { value: string }): undefined => {
+    print(`custom global function called ${value?.value ?? 'undefined'}`)
+    return undefined
+}
