@@ -1,3 +1,4 @@
+import { runActionChecks } from "./action"
 import { runBehaviourChecks } from "./behaviour"
 import { runGetChecks } from "./get"
 import { runSetChecks } from "./set"
@@ -13,4 +14,5 @@ export function runExamples(): void {
     runUIChecks()
     runGetChecks()
     runSetChecks()
+    runActionChecks()
 }
