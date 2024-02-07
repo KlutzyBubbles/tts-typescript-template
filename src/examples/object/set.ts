@@ -12,7 +12,8 @@ export function runSetChecks(): void {
         && cBoard !== undefined
         && counter !== undefined) {
         print('Set functions')
-        print(object.setColorTint('Blue'))
+        print(object.setColorTint(Color.Blue))
+        print(object.setColorTint({r: 1, g: 1, b: 1}))
         print(object.setColorTint(Color(1, 1, 1)))
         print(object.setCustomObject({
             image: 'http://cloud-3.steamusercontent.com/ugc/2343629042972162793/4D920BC571EA8C9DBFD257E9AF838070F29841E0/'

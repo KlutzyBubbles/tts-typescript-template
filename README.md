@@ -22,9 +22,28 @@ Assuming you have those two setup, follow these steps
 4. Use `ctrl + alt + S` to reload the save file in TTS with the newly copied scripts.
 
 
+## Typescript limitations
+
+### Colors
+In lua you are sometimes able to pass colors to functions like
+
+```lua
+object.TextTool.setFontColor('Blue')
+object.TextTool.setFontColor({1, 1, 1})
+```
+
+However to support a different typing for `Color.new`, this functionality in typescript has been lost, the solution is to surround them with a `Color` or prefix with `Color.` like
+
+```typescript
+object.TextTool.setFontColor(Color.Blue)
+object.TextTool.setFontColor(Color.fromString('Blue')) // Alternative to pass string variable
+object.TextTool.setFontColor(Color([1, 1, 1]))
+```
+IMO this actually provides more readable code, which is why i kept the change
+
 ## Weird TTS Things
 
-# Global functions
+### Global functions
 Because of the way `typescript-to-lua` builds the lua files, functions are local by default.
 
 This means global event functions like the ones found [here](https://api.tabletopsimulator.com/events/) (onLoad etc) will be outputted as local and wont be called by TTS.
@@ -41,7 +60,7 @@ function onLoad() {
 }
 ```
 
-# TSTL Config
+### TSTL Config
 Because tabletop simulator likes to clear root folder files, you either need to bundle your output, or use the `"luaLibImport": "inline"` in the `tsconfig.json`.
 
 Without this a lib file will be created in the root folder which will work for 1 run in tabletop simulator but reloading the game will throw errors.

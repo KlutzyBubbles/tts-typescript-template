@@ -11,14 +11,14 @@ import { runUIChecks } from "./ui"
 
 export function runExamples(): void {
     print('Object examples')
-    // runBehaviourChecks()
-    // runTransformChecks()
-    // runTagChecks()
-    // runUIChecks()
-    // runGetChecks()
-    // runSetChecks()
-    // runActionChecks()
-    // runComponentChecks()
-    // runHideChecks()
+    runBehaviourChecks()
+    runTransformChecks()
+    runTagChecks()
+    runUIChecks()
+    runGetChecks()
+    runSetChecks()
+    runActionChecks()
+    runComponentChecks()
+    runHideChecks()
     runGlobalChecks()
 }

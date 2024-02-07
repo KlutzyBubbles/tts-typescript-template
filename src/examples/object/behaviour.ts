@@ -161,9 +161,9 @@ class ObjectTypeFunctions {
                     print(object.TextTool.getFontColor())
                     print(object.TextTool.getFontSize())
                     print(object.TextTool.getValue())
-                    print(object.TextTool.setFontColor('Blue'))
+                    print(object.TextTool.setFontColor(Color.Blue))
                     print(object.TextTool.setFontColor(Color(0.5, 0, 1)))
-                    print(object.TextTool.setFontColor([1, 1, 1]))
+                    print(object.TextTool.setFontColor(Color([1, 1, 1])))
                     print(object.TextTool.setFontSize(5))
                     print(object.TextTool.setValue('I am some text'))
                 }
