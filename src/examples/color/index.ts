@@ -90,4 +90,7 @@ export function runExamples(): void {
     print(color.dump('prefixer'))
     print(Color.dump(color))
     print(Color.dump(color, 'prefixer'))
+    print(Color.list.length)
+    print(Color.Add('TestColor', Color(0.69, 0.69, 0.69, 0.69)))
+    print(Color.dump(Color.TestColor ?? Color.White))
 }

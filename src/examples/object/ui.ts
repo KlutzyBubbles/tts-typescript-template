@@ -61,6 +61,15 @@ export function runUIChecks(): void {
             validation: 4,
             tab: 1
         }))
+        print(object.editInput({
+            index: 0,
+            label: 'Label 1111',
+            tooltip: 'Tooltip again',
+            alignment: Alignment.Center,
+            value: 'another',
+            validation: Validation.Username,
+            tab: TabAction.Indent
+        }))
         print(object.getInputs())
     }
 }
