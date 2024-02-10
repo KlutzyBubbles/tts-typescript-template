@@ -6,6 +6,11 @@ import { runExamples as runGridExamples } from "./grid";
 import { runExamples as runHandExamples } from "./hands";
 import { runExamples as runInfoExamples } from "./info";
 import { runExamples as runJsonExamples } from "./json";
+import { runExamples as runLightingExamples } from "./lighting";
+import { runExamples as runMusicExamples } from "./music";
+import { runExamples as runNotesExamples } from "./notes";
+import { runExamples as runPhysicsExamples } from "./physics";
+import { runExamples as runPlayerExamples } from "./player";
 
 export default function runExamples(): void {
     // runBaseExamples()
@@ -15,5 +20,10 @@ export default function runExamples(): void {
     // runGridExamples()
     // runHandExamples()
     // runInfoExamples()
-    runJsonExamples()
+    // runJsonExamples()
+    // runLightingExamples()
+    // runMusicExamples()
+    // runNotesExamples()
+    // runPhysicsExamples()
+    runPlayerExamples()
 }
