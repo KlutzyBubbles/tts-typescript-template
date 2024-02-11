@@ -11,6 +11,14 @@ import { runExamples as runMusicExamples } from "./music";
 import { runExamples as runNotesExamples } from "./notes";
 import { runExamples as runPhysicsExamples } from "./physics";
 import { runExamples as runPlayerExamples } from "./player";
+import { runExamples as runTableExamples } from "./table";
+import { runExamples as runTimeExamples } from "./time";
+import { runExamples as runTimerExamples } from "./timer";
+import { runExamples as runTurnExamples } from "./turns";
+import { runExamples as runUIExamples } from "./ui";
+import { runExamples as runVectorExamples } from "./vector";
+import { runExamples as runWaitExamples } from "./wait";
+import { runExamples as runWebRequestExamples } from "./webrequest";
 
 export default function runExamples(): void {
     // runBaseExamples()
@@ -25,5 +33,13 @@ export default function runExamples(): void {
     // runMusicExamples()
     // runNotesExamples()
     // runPhysicsExamples()
-    runPlayerExamples()
+    // runPlayerExamples()
+    // runTableExamples()
+    // runTimeExamples()
+    // runTimerExamples()
+    // runTurnExamples()
+    // runUIExamples()
+    runVectorExamples()
+    // runWaitExamples()
+    // runWebRequestExamples()
 }

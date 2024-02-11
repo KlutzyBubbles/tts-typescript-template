@@ -77,6 +77,10 @@ export function runExamples(): void {
     color.set(1, 1, 1, 0)
     // color.set(1, 1)
     let [r, g, b, a] = color.get()
+    print(`${r}, ${g}, ${b}, ${a}`)
+    let [anotherA, anotherB, anotherC, anotherD] = color.get()
+    print(`${anotherA}, ${anotherB}, ${anotherC}, ${anotherD}`)
+    print('1--------')
     color = color.copy()
     print(color.toHex())
     print(color.toHex(true))
@@ -93,4 +97,5 @@ export function runExamples(): void {
     print(Color.list.length)
     print(Color.Add('TestColor', Color(0.69, 0.69, 0.69, 0.69)))
     print(Color.dump(Color.TestColor ?? Color.White))
+    print(Color.noexist)
 }
