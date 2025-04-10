@@ -1,6 +1,6 @@
 # Tabletop Simulator Typescript Template
 
-This repo provides a template to setup an environment to create, build and test typescript to lua tabletop simulator scripts.
+This repo provides a template to setup an environment to create, build and test typescript to lua tabletop simulator scripts. Using [typescript-to-lua](https://github.com/TypeScriptToLua/TypeScriptToLua) and [tts-types](https://github.com/Benjamin-Dobell/tts-types)
 
 It also houses all the example scripts used to test `tts-typescript`, these can be found under `src/examples/`.
 
